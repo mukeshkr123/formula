@@ -1,7 +1,7 @@
 
 export default function Home() {
   return (
-    <div>
+    <div className="h-[550px]">
       Home page
     </div>
   );

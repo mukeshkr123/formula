@@ -1,3 +1,4 @@
+import { Footer } from '@/components/footer/footer'
 import Navbar from '@/components/navbar/navbar'
 import React from 'react'
 
@@ -7,9 +8,10 @@ interface Props {
 
 const Mailayout = ({ children }: Props) => {
     return (
-        <div className='w-full'>
+        <div className='w-full h-full'>
             <Navbar />
             <main>{children}</main>
+            <Footer />
         </div>
     )
 }
