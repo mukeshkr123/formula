@@ -36,11 +36,11 @@ export const Sidebar = () => {
                 <div>
                     {
                         formulaSidebar.map(item => (
-                            <div>
+                            <div key={item.title}>
                                 <h2>{item.title}</h2>
                                 {
                                     item.contents.map(item1 => (
-                                        <Accordion type='single' collapsible className='w-[200px]'>
+                                        <Accordion type='single' key={item1.title} collapsible className='w-[200px]'>
                                             <AccordionItem value={item.title}>
                                                 <AccordionTrigger>
                                                     {item1.title}
@@ -48,7 +48,7 @@ export const Sidebar = () => {
                                                 <AccordionContent>
                                                     {
                                                         item1.content.map(item2 => (
-                                                            <p>{item2.title}</p>
+                                                            <p key={item2.title}>{item2.title}</p>
                                                         ))
                                                     }
                                                 </AccordionContent>

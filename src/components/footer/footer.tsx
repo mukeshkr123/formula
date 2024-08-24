@@ -11,7 +11,7 @@ export const Footer = () => {
                     <div className='flex flex-col gap-y-2'>
                         {
                             quickLinks.map((item) => (
-                                <Link href={item.path} className='text-[#666666] text-sm'>{item.text}</Link>
+                                <Link href={item.path} className='text-[#666666] text-sm' key={item.text}>{item.text}</Link>
                             ))
                         }
                     </div>
@@ -21,7 +21,7 @@ export const Footer = () => {
                     <div className='flex flex-col gap-y-2'>
                         {
                             categories.map((item) => (
-                                <Link href={item.path} className='text-[#666666] text-sm'>{item.text}</Link>
+                                <Link href={item.path} key={item.text} className='text-[#666666] text-sm'>{item.text}</Link>
                             ))
                         }
                     </div>
@@ -31,7 +31,7 @@ export const Footer = () => {
                     <div className='flex flex-col gap-y-2'>
                         {
                             socialMediaLinks.map((item) => (
-                                <Link href={item.url} className='text-[#666666] flex items-center gap-x-2 text-sm'>
+                                <Link href={item.url} className='text-[#666666] flex items-center gap-x-2 text-sm' key={item.text}>
                                     <item.icon className='size-5' />
                                     {item.text}
                                 </Link>
@@ -44,7 +44,7 @@ export const Footer = () => {
                     <div className='flex flex-col gap-y-2'>
                         {
                             supportLinks.map((item) => (
-                                <Link href={item.path} className='text-[#666666] text-sm'>{item.text}</Link>
+                                <Link href={item.path} className='text-[#666666] text-sm' key={item.text}>{item.text}</Link>
                             ))
                         }
                     </div>
